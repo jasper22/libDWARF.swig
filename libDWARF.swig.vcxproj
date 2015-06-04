@@ -114,9 +114,12 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)_wrap.c;$(Outdir)%(Filename).py</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)_wrap.c;$(Outdir)%(Filename).py</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)_wrap.c;</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)_wrap.c;</Outputs>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
