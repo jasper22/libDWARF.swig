@@ -110,8 +110,8 @@
   <ItemGroup>
     <CustomBuild Include="libDWARF.i">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.swig.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(SolutionDir)..\..\swigwin-3.0.5\swig.exe" -csharp -dllimport libDWARF.swig.dll -namespace libDWARF.Net.Interop -outdir $(Outdir) %(Identity)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename)_wrap.c;</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename)_wrap.c;</Outputs>
     </CustomBuild>
