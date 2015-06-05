@@ -256,7 +256,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_libDWARF_swig(SWIG_CSharp
 #define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentOutOfRangeException, msg, ""); return nullreturn; } else
 
 
-	#include "..\..\libdwarf.c++\libdwarf\libdwarf.swig.h"
+	#include "..\libDWARF\libdwarf\libdwarf.swig.h"
 
 
 #ifdef __cplusplus
@@ -6398,6 +6398,22 @@ SWIGEXPORT int SWIGSTDCALL CSharp_dwarf_loclist_from_expr_b(void * jarg1, void *
   arg8 = (Dwarf_Signed *)jarg8; 
   arg9 = (Dwarf_Error *)jarg9; 
   result = (int)dwarf_loclist_from_expr_b(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_dwarf_lowpc(void * jarg1, void * jarg2, void * jarg3) {
+  int jresult ;
+  Dwarf_Die arg1 = (Dwarf_Die) 0 ;
+  Dwarf_Addr *arg2 = (Dwarf_Addr *) 0 ;
+  Dwarf_Error *arg3 = (Dwarf_Error *) 0 ;
+  int result;
+  
+  arg1 = (Dwarf_Die)jarg1; 
+  arg2 = (Dwarf_Addr *)jarg2; 
+  arg3 = (Dwarf_Error *)jarg3; 
+  result = (int)dwarf_lowpc(arg1,arg2,arg3);
   jresult = result; 
   return jresult;
 }
